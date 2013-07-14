@@ -1,0 +1,19 @@
+{
+    "name": "Google Play Music Library Default",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Changes the default tab in the 'My Library' section of Google Play Music",
+
+    "permissions": [
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://play.google.com/music/listen*"],
+            "js": ["js/main.js"]
+        }
+    ],
+
+    "options_page": "html/options.html"
+}
