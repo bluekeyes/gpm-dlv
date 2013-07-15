@@ -11,8 +11,8 @@
     }
 
     if (element != null) {
-        chrome.storage.sync.get({'gpmLibraryDefault': 'albums'}, function(item) {
-            element.setAttribute('data-type', item.gpmLibraryDefault);
+        chrome.storage.sync.get({'gpmDefaultLibraryView': 'albums'}, function(item) {
+            element.setAttribute('data-type', item.gpmDefaultLibraryView);
         });
     } else {
         console.log('No element found; did Google change the page?');

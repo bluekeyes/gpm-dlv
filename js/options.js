@@ -2,9 +2,9 @@ function save_options() {
     var select = document.getElementById("default");
     var value = select.children[select.selectedIndex].value;
 
-    chrome.storage.sync.set({'gpmLibraryDefault': value}, function() {
+    chrome.storage.sync.set({'gpmDefaultLibraryView': value}, function() {
         var status = document.getElementById("status");
-        status.innerHTML = "Saved; refresh any Google Play Music tabs.";
+        status.innerHTML = "Saved; refresh any Google Music tabs.";
         setTimeout(function() {
             status.innerHTML = "";
         }, 2500);
@@ -12,11 +12,11 @@ function save_options() {
 }
 
 function restore_options() {
-    chrome.storage.sync.get({'gpmLibraryDefault': 'albums'}, function(item) {
+    chrome.storage.sync.get({'gpmDefaultLibraryView': 'albums'}, function(item) {
         var select = document.getElementById("default");
         for (var i = 0; i < select.children.length; i++) {
             var child = select.children[i];
-            if (child.value == item.gpmLibraryDefault) {
+            if (child.value == item.gpmDefaultLibraryView) {
                 child.selected = "true";
                 break;
             }

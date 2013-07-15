@@ -1,8 +1,8 @@
 {
-    "name": "Google Play Music Library Default",
+    "name": "Google Play Music Default Library View",
     "version": "0.0.1",
     "manifest_version": 2,
-    "description": "Changes the default tab in the 'My Library' section of Google Play Music",
+    "description": "Changes the default view in the 'My Library' section of Google Play Music",
 
     "permissions": [
         "storage"
