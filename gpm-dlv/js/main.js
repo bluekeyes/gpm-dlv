@@ -15,6 +15,6 @@
             element.setAttribute('data-type', item.gpmDefaultLibraryView);
         });
     } else {
-        console.log('No element found; did Google change the page?');
+        console.error('No element found; did Google change the page?');
     }
 })();
