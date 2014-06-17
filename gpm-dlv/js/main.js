@@ -1,6 +1,6 @@
 (function() {
     var element = null;
-    var nav_elements = document.querySelectorAll('li.nav-item-container');
+    var nav_elements = document.querySelectorAll('.nav-item-container');
 
     for (var i = 0; i < nav_elements.length; i++) {
         var current = nav_elements[i];
